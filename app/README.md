@@ -61,8 +61,8 @@ The recommendation engine uses a weighted average approach:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/darinz/Movie-Rec-Sys.git
-cd Movie-Rec-Sys
+git clone https://github.com/darinz/Recommender-Systems.git
+cd Recommender-Systems
 ```
 
 2. Install dependencies:
