@@ -9,12 +9,6 @@
 
 This repository explores the application and research of recommender systems, focusing on practical implementations and insights. It features movie recommender system built using the MovieLens dataset, along with key research findings, performance evaluations, and key learnings. Dive in for a hands-on exploration of recommendation algorithms, data analysis, and system optimization.
 
-## Live Demo
-
-> **Note**: This app has been consolidated into this repository and will be redeployed to Streamlit. The live demo link below may be temporarily unavailable during the transition.
-
-**[Try the Interactive Movie Recommender](https://6oujescmadydjnbgygtm9o.streamlit.app)**
-
 ## Project Structure
 
 ```
