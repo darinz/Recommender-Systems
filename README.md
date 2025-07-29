@@ -26,9 +26,13 @@ Recommender-Systems/
 ├── bandits/               # Multi-armed bandit algorithms
 │   ├── recommendation_system.py
 │   └── README.md
+├── content/               # Content-based filtering
+│   └── content-based_recommender.py
 ├── ibcf/                  # Item-based collaborative filtering
 │   ├── movie_recommender.py
 │   ├── requirements.txt
+│   └── README.md
+├── papers/                # Research papers and references
 │   └── README.md
 └── README.md
 ```
@@ -206,6 +210,10 @@ python movie_recommender.py
 - **Memory Efficient**: Uses sparse representations
 - **Robust**: Handles missing data gracefully
 - **Cold-start**: Effective handling of new users and movies
+
+## Research Papers (`papers/`)
+
+Curated collection of seminal research papers covering foundational concepts, collaborative filtering, content-based methods, matrix factorization, deep learning approaches, and recent advances. See [papers/README.md](papers/README.md) for detailed summaries and implementation resources.
 
 ## Contributing
 
