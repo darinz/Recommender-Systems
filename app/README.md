@@ -33,17 +33,6 @@ This recommendation system implements content-based filtering using movie metada
 - **Data Format**: Parquet, CSV
 - **Deployment**: Streamlit Cloud
 
-## Project Structure
-
-```
-Movie-Rec-Sys/
-├── movie_recommender.py    # Main application logic
-├── data/                   # Dataset directory
-│   ├── S100.parquet       # Similarity matrix for top 100 movies
-│   └── top100_movies.csv  # Movie metadata and information
-└── README.md              # Project documentation
-```
-
 ## How It Works
 
 1. **Data Loading**: The system loads pre-computed similarity matrices and movie metadata
