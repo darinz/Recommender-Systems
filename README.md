@@ -26,6 +26,10 @@ Recommender-Systems/
 ├── bandits/               # Multi-armed bandit algorithms
 │   ├── recommendation_system.py
 │   └── README.md
+├── cf/                    # Collaborative filtering implementations
+│   ├── collaborative_filtering.py
+│   ├── collaborative_filtering.R
+│   └── README.md
 ├── content/               # Content-based filtering
 │   ├── movie_recommender.py
 │   ├── content-based_recommender.py
@@ -163,7 +167,43 @@ pip install -r requirements.txt
 python movie_recommender.py
 ```
 
-### 4. Item-Based Collaborative Filtering (`ibcf/`)
+### 4. Collaborative Filtering (`cf/`)
+
+A comprehensive implementation of **collaborative filtering algorithms** with both Python and R implementations, providing educational resources and practical examples.
+
+**Key Features:**
+- **Dual Implementation**: Both Python and R versions for educational purposes
+- **Multiple Algorithms**: User-based and item-based collaborative filtering
+- **Educational Focus**: Step-by-step explanations and documentation
+- **Cross-language Comparison**: Compare implementations across programming languages
+- **Practical Examples**: Real-world usage scenarios and best practices
+
+**Usage Example:**
+```python
+from collaborative_filtering import CollaborativeFiltering
+
+# Initialize the system
+cf = CollaborativeFiltering()
+
+# Load and prepare data
+ratings_matrix = cf.load_data()
+
+# Generate recommendations using user-based CF
+recommendations = cf.user_based_recommendations(user_id=1, n_recommendations=10)
+
+# Generate recommendations using item-based CF
+item_recommendations = cf.item_based_recommendations(user_id=1, n_recommendations=10)
+```
+
+**Quick Start:**
+```bash
+cd cf
+python collaborative_filtering.py
+# or
+Rscript collaborative_filtering.R
+```
+
+### 5. Item-Based Collaborative Filtering (`ibcf/`)
 
 A sophisticated implementation of **item-based collaborative filtering** using the MovieLens dataset with advanced preprocessing and optimization.
 
@@ -218,6 +258,7 @@ The systems utilize the comprehensive MovieLens dataset:
 | **Interactive App** | Content-based + IBCF | Real-time, visual interface | User-facing applications |
 | **Bandits** | Multi-armed bandits | Exploration vs exploitation, cold-start | Research, adaptive systems |
 | **Content-Based** | Content-based filtering | Feature interpretable, cold-start handling | Educational, feature-rich domains |
+| **CF** | Collaborative filtering | Educational, cross-language | Learning and comparison |
 | **IBCF** | Item-based CF | Proven performance, interpretable | Production systems |
 
 ## Getting Started
@@ -233,6 +274,14 @@ streamlit run movie_recommender_app.py
 cd content
 pip install -r requirements.txt
 python movie_recommender.py
+```
+
+### For Collaborative Filtering Learning
+```bash
+cd cf
+python collaborative_filtering.py
+# or for R implementation
+Rscript collaborative_filtering.R
 ```
 
 ### For Research/Development
