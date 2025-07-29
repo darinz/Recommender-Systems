@@ -14,8 +14,10 @@ This repository explores the application and research of recommender systems, fo
 ```
 Recommender-Systems/
 ├── app/                    # Interactive Streamlit application
-│   ├── movie_recommender.py
+│   ├── movie_recommender_app.py
 │   ├── data/
+│   │   ├── S100.parquet
+│   │   └── top100_movies.csv
 │   └── README.md
 ├── bandits/               # Multi-armed bandit algorithms
 │   ├── recommendation_system.py
@@ -58,7 +60,7 @@ Recommender-Systems/
 3. **Run the interactive app**
    ```bash
    cd app
-   streamlit run movie_recommender.py
+   streamlit run movie_recommender_app.py
    ```
 
 ## Systems Overview
@@ -69,14 +71,16 @@ A **Streamlit-based web application** that provides an interactive interface for
 
 **Key Features:**
 - **Interactive UI**: Rate movies and get instant recommendations
-- **Visual Interface**: Movie posters and intuitive design
+- **Visual Interface**: Movie posters and intuitive design with expandable sections
 - **Real-time Recommendations**: Instant personalized suggestions
 - **Responsive Design**: Works on desktop and mobile
+- **External Data Integration**: Loads similarity matrices and movie metadata from external sources
 
 **Technology Stack:**
 - Frontend: Streamlit
 - Data Processing: Pandas, NumPy
 - Algorithm: Item-based collaborative filtering
+- Data Sources: External similarity matrices and movie metadata
 - Deployment: Streamlit Cloud
 
 **[Try the Live Demo](https://6oujescmadydjnbgygtm9o.streamlit.app)**
@@ -178,7 +182,7 @@ The systems utilize the comprehensive MovieLens dataset:
 ### For Interactive Use
 ```bash
 cd app
-streamlit run movie_recommender.py
+streamlit run movie_recommender_app.py
 ```
 
 ### For Research/Development
