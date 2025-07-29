@@ -27,7 +27,11 @@ Recommender-Systems/
 │   ├── recommendation_system.py
 │   └── README.md
 ├── content/               # Content-based filtering
-│   └── content-based_recommender.py
+│   ├── movie_recommender.py
+│   ├── content-based_recommender.py
+│   ├── demo_movie_recommender.py
+│   ├── requirements.txt
+│   └── README.md
 ├── ibcf/                  # Item-based collaborative filtering
 │   ├── movie_recommender.py
 │   ├── requirements.txt
@@ -127,7 +131,39 @@ movie_id = recommender.epsilon_greedy_recommend(user_id=1, epsilon=0.2)
 recommender.receive_rating(user_id=1, movie_id=movie_id, rating=4.5)
 ```
 
-### 3. Item-Based Collaborative Filtering (`ibcf/`)
+### 3. Content-Based Recommender System (`content/`)
+
+A **content-based movie recommendation system** that analyzes movie features (genre, year, director, etc.) to generate personalized recommendations. Features comprehensive educational documentation and robust implementation.
+
+**Key Features:**
+- Content-based filtering with multiple similarity metrics (cosine, euclidean, pearson)
+- Advanced feature engineering (numerical, categorical, text features)
+- User profile creation from rating history
+- Educational focus with step-by-step explanations
+- Visualization tools and evaluation metrics (MSE, MAE)
+- Robust error handling and fallback mechanisms
+
+**Usage Example:**
+```python
+from content_based_recommender import ContentBasedRecommender
+
+# Initialize and create profiles
+recommender = ContentBasedRecommender(similarity_metric='cosine')
+item_profiles = recommender.create_item_profiles(movies_df, ['year', 'rating'], ['title'])
+user_profiles = recommender.create_user_profiles(ratings_df, movies_df)
+
+# Generate recommendations
+recommendations = recommender.recommend(user_id=1, n_recommendations=10)
+```
+
+**Quick Start:**
+```bash
+cd content
+pip install -r requirements.txt
+python movie_recommender.py
+```
+
+### 4. Item-Based Collaborative Filtering (`ibcf/`)
 
 A sophisticated implementation of **item-based collaborative filtering** using the MovieLens dataset with advanced preprocessing and optimization.
 
@@ -181,6 +217,7 @@ The systems utilize the comprehensive MovieLens dataset:
 |--------|-----------|-----------|----------|
 | **Interactive App** | Content-based + IBCF | Real-time, visual interface | User-facing applications |
 | **Bandits** | Multi-armed bandits | Exploration vs exploitation, cold-start | Research, adaptive systems |
+| **Content-Based** | Content-based filtering | Feature interpretable, cold-start handling | Educational, feature-rich domains |
 | **IBCF** | Item-based CF | Proven performance, interpretable | Production systems |
 
 ## Getting Started
@@ -189,6 +226,13 @@ The systems utilize the comprehensive MovieLens dataset:
 ```bash
 cd app
 streamlit run movie_recommender_app.py
+```
+
+### For Educational/Content-Based Learning
+```bash
+cd content
+pip install -r requirements.txt
+python movie_recommender.py
 ```
 
 ### For Research/Development
