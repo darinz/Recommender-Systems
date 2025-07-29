@@ -1,5 +1,7 @@
 # Movie Recommendation System
 
+> **Note**: This app has been consolidated into this repository and will be redeployed to Streamlit. The live demo link below may be temporarily unavailable during the transition.
+
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![Pandas](https://img.shields.io/badge/Pandas-1.5+-green.svg)](https://pandas.pydata.org/)
