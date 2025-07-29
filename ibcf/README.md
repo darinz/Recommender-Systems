@@ -35,7 +35,7 @@ The Movie Recommender System offers two complementary recommendation engines:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/Movie-Recommender.git
+   git clone https://github.com/yourusername/Recommender-Systems.git
    cd Movie-Recommender
    ```
 
