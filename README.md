@@ -11,7 +11,7 @@ This repository explores the application and research of recommender systems, fo
 
 ## Related Learning Resources
 
-For additional theoretical foundations and educational materials on recommender systems, check out the [PSL Recommender System Module](https://github.com/darinz/PSL/tree/main/13_recommender_system) which provides comprehensive coverage of recommendation algorithms, collaborative filtering techniques, and practical implementations.
+For theoretical foundations and educational materials on recommender systems, check out the [PSL Recommender System Module](https://github.com/darinz/PSL/tree/main/13_recommender_system) which provides comprehensive coverage of recommendation algorithms, collaborative filtering techniques, and practical implementations.
 
 ## Structure
 
