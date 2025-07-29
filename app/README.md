@@ -66,7 +66,7 @@ pip install streamlit pandas numpy
 
 3. Run the application:
 ```bash
-streamlit run movie_recommender.py
+streamlit run movie_recommender_app.py
 ```
 
 ### Usage
