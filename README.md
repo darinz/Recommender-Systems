@@ -44,6 +44,10 @@ Recommender-Systems/
 │   ├── ubcf_vs_ibcf.py
 │   ├── ubcf_vs_ibcf.R
 │   └── README.md
+├── latent/               # Latent factor models (SVD, NMF, SVD++)
+│   ├── latent_factor_models.py
+│   ├── latent_factor_models.R
+│   └── README.md
 ├── papers/                # Research papers and references
 │   └── README.md
 └── README.md
@@ -277,6 +281,60 @@ print(f"UBCF Accuracy: {results['ubcf']['accuracy']}")
 print(f"IBCF Accuracy: {results['ibcf']['accuracy']}")
 ```
 
+### 7. Latent Factor Models (`latent/`)
+
+Advanced **latent factor models** implementation featuring SVD, NMF, and SVD++ algorithms in both Python and R. These models learn low-dimensional representations of users and items to capture underlying patterns in rating data.
+
+**Key Features:**
+- **Multiple Algorithms**: SVD, Non-negative Matrix Factorization (NMF), and SVD++
+- **Dual Implementation**: Both Python and R versions for educational comparison
+- **Custom Latent Factor Model**: Stochastic Gradient Descent optimization with configurable parameters
+- **Enhanced SVD++**: Advanced algorithm with implicit feedback handling
+- **Comprehensive Evaluation**: MAE, RMSE, coverage metrics, and extensive visualizations
+- **Educational Focus**: Detailed factor analysis and model comparison
+
+**Algorithms Implemented:**
+- **SVD (Singular Value Decomposition)**: Matrix factorization using singular value decomposition
+- **NMF (Non-negative Matrix Factorization)**: Factorization with non-negative constraints for interpretable factors
+- **SVD++**: Enhanced SVD with implicit feedback and sophisticated update rules
+- **Custom Latent Factor Model**: SGD-based implementation with user/item biases
+
+**Usage Example:**
+```python
+from latent_factor_models import LatentFactorModel, SVDppModel
+
+# Create and train a latent factor model
+model = LatentFactorModel(n_factors=10, learning_rate=0.01)
+model.fit(ratings_df)
+
+# Make predictions
+prediction = model.predict(user_id, item_id)
+
+# Get recommendations
+recommendations = model.recommend(user_id, n_recommendations=5)
+
+# Find similar items
+similar_items = model.get_similar_items(item_id, n_similar=5)
+```
+
+**R Usage:**
+```r
+# Load and run the complete analysis
+source("latent_factor_models.R")
+
+# The script automatically:
+# 1. Generates synthetic data with latent structure
+# 2. Trains SVD and NMF models
+# 3. Evaluates performance with MAE and RMSE
+# 4. Creates visualizations of results
+```
+
+**Key Insights:**
+- **Factor Analysis**: Captures different aspects of user preferences and item characteristics
+- **Model Comparison**: SVD++ typically outperforms basic latent factor models
+- **Bias Analysis**: User and item biases capture rating tendencies and popularity
+- **Interpretability**: NMF provides non-negative, interpretable factors
+
 ## Dataset Information
 
 The systems utilize the comprehensive MovieLens dataset:
@@ -298,6 +356,7 @@ The systems utilize the comprehensive MovieLens dataset:
 | **CF** | Collaborative filtering | Educational, cross-language | Learning and comparison |
 | **IBCF** | Item-based CF | Proven performance, interpretable | Production systems |
 | **UBCF vs IBCF** | UBCF + IBCF comparison | Algorithm comparison, educational | Research and learning |
+| **Latent Factor Models** | SVD, NMF, SVD++ | Matrix factorization, latent representations | Advanced research, production systems |
 
 ## Getting Started
 
@@ -340,6 +399,14 @@ cd ubcf-ibcf
 python ubcf_vs_ibcf.py
 # or for R implementation
 Rscript ubcf_vs_ibcf.R
+```
+
+### For Latent Factor Models
+```bash
+cd latent
+python latent_factor_models.py
+# or for R implementation
+Rscript latent_factor_models.R
 ```
 
 ## Performance Characteristics
