@@ -60,12 +60,14 @@ class ContentBasedRecommender:
                 # Encode categorical features
                 le = LabelEncoder()
                 encoded_values = le.fit_transform(items_df[col])
-                profiles.append(encoded_values)
+                # Ensure 2D array
+                profiles.append(encoded_values.reshape(-1, 1))
                 feature_names.extend([f"{col}_{val}" for val in le.classes_])
                 self.label_encoders[col] = le
             else:
                 # Numerical features
-                profiles.append(items_df[col].values)
+                # Ensure 2D array
+                profiles.append(items_df[col].values.reshape(-1, 1))
                 feature_names.append(col)
         
         # Handle text features
@@ -274,7 +276,7 @@ print(f"\nItem profiles shape: {item_profiles.shape}")
 print(f"Number of features: {len(recommender.feature_names)}")
 
 # Create user profiles
-user_profiles = recommender.create_user_profiles(ratings_df, movies_df)
+user_profiles = recommender.create_user_profiles(ratings_df, movies_df, item_id_col='movie_id')
 
 print(f"Number of user profiles: {len(user_profiles)}")
 
@@ -306,7 +308,7 @@ for metric in similarity_metrics:
     
     recommender_metric = ContentBasedRecommender(similarity_metric=metric)
     recommender_metric.create_item_profiles(movies_df, feature_columns, text_columns)
-    recommender_metric.create_user_profiles(ratings_df, movies_df)
+    recommender_metric.create_user_profiles(ratings_df, movies_df, item_id_col='movie_id')
     
     recommendations = recommender_metric.recommend(test_user, n_recommendations=5)
     results[metric] = recommendations
