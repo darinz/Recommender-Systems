@@ -87,8 +87,6 @@ A **Streamlit-based web application** that provides an interactive interface for
 - Data Sources: External similarity matrices and movie metadata
 - Deployment: Streamlit Cloud
 
-**[Try the Live Demo](https://6oujescmadydjnbgygtm9o.streamlit.app)**
-
 ### 2. Multi-Armed Bandit System (`bandits/`)
 
 An advanced recommendation system using **multi-armed bandit algorithms** to balance exploration of new movies with exploitation of known good recommendations.
