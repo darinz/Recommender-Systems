@@ -52,6 +52,10 @@ Recommender-Systems/
 │   ├── challenge_analysis.py
 │   ├── challenge_analysis.R
 │   └── README.md
+├── deep-rec-sys/        # Deep learning recommender systems
+│   ├── deep_rec_sys.py
+│   ├── deep_rec_sys.R
+│   └── README.md
 ├── papers/                # Research papers and references
 │   └── README.md
 └── README.md
@@ -407,6 +411,58 @@ python challenge_analysis.py
 Rscript challenge_analysis.R
 ```
 
+### 9. Deep Recommender Systems (`deep-rec-sys/`)
+
+Advanced **deep learning-based recommender systems** implementing state-of-the-art neural network architectures for collaborative filtering and rating prediction. Features both Python (PyTorch) and R (Keras) implementations with comprehensive evaluation and visualization capabilities.
+
+**Key Features:**
+- **Multiple Architectures**: Neural Collaborative Filtering (NCF), Wide & Deep, and Neural Matrix Factorization (NeuMF)
+- **Dual Implementation**: Both Python and R versions for educational comparison
+- **Synthetic Data Generation**: Non-linear interaction patterns for testing model capabilities
+- **Comprehensive Evaluation**: MAE, RMSE, training curves, and performance analysis
+- **Advanced Visualization**: Training progress, model comparisons, and prediction analysis
+- **GPU Support**: PyTorch implementation supports GPU acceleration
+
+**Algorithms Implemented:**
+- **Neural Collaborative Filtering (NCF)**: Combines matrix factorization with multi-layer perceptrons
+- **Wide & Deep**: Linear models for memorization + neural networks for generalization
+- **Neural Matrix Factorization (NeuMF)**: Integrates GMF and MLP components for enhanced performance
+
+**Usage Example:**
+```python
+# Python implementation
+python deep_rec_sys.py
+
+# R implementation
+Rscript deep_rec_sys.R
+```
+
+**Key Capabilities:**
+- **Non-linear Pattern Learning**: Models capture complex user-item interactions
+- **Regularization**: Dropout and early stopping prevent overfitting
+- **Scalability**: Efficient training on synthetic datasets with 500 users and 300 items
+- **Interpretability**: Comprehensive visualization tools for model analysis
+
+**Technical Implementation:**
+- **Data Processing**: Automatic user/item ID mapping and train/validation/test splits
+- **Model Training**: Adam optimizer with learning rate scheduling
+- **Evaluation Metrics**: MAE, RMSE, training/validation loss curves
+- **Visualization**: Training progress, model comparisons, and prediction accuracy
+
+**Research Context:**
+Based on seminal papers in deep recommender systems:
+- **NCF**: "Neural Collaborative Filtering" (He et al., 2017)
+- **Wide & Deep**: "Wide & Deep Learning for Recommender Systems" (Cheng et al., 2016)
+- **NeuMF**: "Neural Collaborative Filtering" (He et al., 2017)
+
+**Quick Start:**
+```bash
+cd deep-rec-sys
+python deep_rec_sys.py
+# or for R implementation
+Rscript deep_rec_sys.R
+```
+
 ## Dataset Information
 
 The systems utilize the comprehensive MovieLens dataset:
@@ -430,6 +486,7 @@ The systems utilize the comprehensive MovieLens dataset:
 | **UBCF vs IBCF** | UBCF + IBCF comparison | Algorithm comparison, educational | Research and learning |
 | **Latent Factor Models** | SVD, NMF, SVD++ | Matrix factorization, latent representations | Advanced research, production systems |
 | **Challenge Analysis** | Cold start, sparsity, bias analysis | Challenge assessment, bias mitigation | Research, system evaluation |
+| **Deep Recommender Systems** | NCF, Wide & Deep, NeuMF | Deep learning, non-linear patterns | Advanced research, neural approaches |
 
 ## Getting Started
 
@@ -488,6 +545,14 @@ cd challenge
 python challenge_analysis.py
 # or for R implementation
 Rscript challenge_analysis.R
+```
+
+### For Deep Recommender Systems
+```bash
+cd deep-rec-sys
+python deep_rec_sys.py
+# or for R implementation
+Rscript deep_rec_sys.R
 ```
 
 ## Performance Characteristics
