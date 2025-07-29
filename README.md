@@ -13,53 +13,6 @@ This repository explores the application and research of recommender systems, fo
 
 For theoretical foundations and educational materials on recommender systems, check out the [PSL Recommender System Module](https://github.com/darinz/PSL/tree/main/13_recommender_system) which provides comprehensive coverage of recommendation algorithms, collaborative filtering techniques, and practical implementations.
 
-## Structure
-
-```
-Recommender-Systems/
-├── app/                    # Interactive Streamlit application
-│   ├── movie_recommender_app.py
-│   ├── data/
-│   │   ├── S100.parquet
-│   │   └── top100_movies.csv
-│   └── README.md
-├── bandits/               # Multi-armed bandit algorithms
-│   ├── recommendation_system.py
-│   └── README.md
-├── cf/                    # Collaborative filtering implementations
-│   ├── collaborative_filtering.py
-│   ├── collaborative_filtering.R
-│   └── README.md
-├── content/               # Content-based filtering
-│   ├── movie_recommender.py
-│   ├── content-based_recommender.py
-│   ├── demo_movie_recommender.py
-│   ├── requirements.txt
-│   └── README.md
-├── ibcf/                  # Item-based collaborative filtering
-│   ├── movie_recommender.py
-│   ├── requirements.txt
-│   └── README.md
-├── ubcf-ibcf/            # User-based vs Item-based CF comparison
-│   ├── ubcf_vs_ibcf.py
-│   ├── ubcf_vs_ibcf.R
-│   └── README.md
-├── latent/               # Latent factor models (SVD, NMF, SVD++)
-│   ├── latent_factor_models.py
-│   ├── latent_factor_models.R
-│   └── README.md
-├── challenge/            # Recommender system challenges analysis
-│   ├── challenge_analysis.py
-│   ├── challenge_analysis.R
-│   └── README.md
-├── deep-rec-sys/        # Deep learning recommender systems
-│   ├── deep_rec_sys.py
-│   ├── deep_rec_sys.R
-│   └── README.md
-├── papers/                # Research papers and references
-│   └── README.md
-└── README.md
-```
 
 ## Quick Start
 
@@ -94,6 +47,20 @@ Recommender-Systems/
    cd app
    streamlit run movie_recommender_app.py
    ```
+
+## Algorithm Comparison
+
+| System | Algorithm | Strengths | Use Case |
+|--------|-----------|-----------|----------|
+| **Interactive App** | Content-based + IBCF | Real-time, visual interface | User-facing applications |
+| **Bandits** | Multi-armed bandits | Exploration vs exploitation, cold-start | Research, adaptive systems |
+| **Content-Based** | Content-based filtering | Feature interpretable, cold-start handling | Educational, feature-rich domains |
+| **CF** | Collaborative filtering | Educational, cross-language | Learning and comparison |
+| **IBCF** | Item-based CF | Proven performance, interpretable | Production systems |
+| **UBCF vs IBCF** | UBCF + IBCF comparison | Algorithm comparison, educational | Research and learning |
+| **Latent Factor Models** | SVD, NMF, SVD++ | Matrix factorization, latent representations | Advanced research, production systems |
+| **Challenge Analysis** | Cold start, sparsity, bias analysis | Challenge assessment, bias mitigation | Research, system evaluation |
+| **Deep Recommender Systems** | NCF, Wide & Deep, NeuMF | Deep learning, non-linear patterns | Advanced research, neural approaches |
 
 ## Systems Overview
 
@@ -473,20 +440,6 @@ The systems utilize the comprehensive MovieLens dataset:
 | **Movies** | 3,706 |
 | **Users** | 6,040 |
 | **Rating Scale** | 1-5 stars |
-
-## Algorithm Comparison
-
-| System | Algorithm | Strengths | Use Case |
-|--------|-----------|-----------|----------|
-| **Interactive App** | Content-based + IBCF | Real-time, visual interface | User-facing applications |
-| **Bandits** | Multi-armed bandits | Exploration vs exploitation, cold-start | Research, adaptive systems |
-| **Content-Based** | Content-based filtering | Feature interpretable, cold-start handling | Educational, feature-rich domains |
-| **CF** | Collaborative filtering | Educational, cross-language | Learning and comparison |
-| **IBCF** | Item-based CF | Proven performance, interpretable | Production systems |
-| **UBCF vs IBCF** | UBCF + IBCF comparison | Algorithm comparison, educational | Research and learning |
-| **Latent Factor Models** | SVD, NMF, SVD++ | Matrix factorization, latent representations | Advanced research, production systems |
-| **Challenge Analysis** | Cold start, sparsity, bias analysis | Challenge assessment, bias mitigation | Research, system evaluation |
-| **Deep Recommender Systems** | NCF, Wide & Deep, NeuMF | Deep learning, non-linear patterns | Advanced research, neural approaches |
 
 ## Getting Started
 
