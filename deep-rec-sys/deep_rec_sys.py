@@ -1,4 +1,7 @@
 # Deep Recommender Systems
+# This script demonstrates the implementation of deep recommender systems using PyTorch.
+# It includes various models: NCF, Wide & Deep, and NeuMF, and evaluates their performance.
+# The script also includes synthetic data generation with non-linear patterns and visualization of model performance.
 
 import numpy as np
 import pandas as pd
