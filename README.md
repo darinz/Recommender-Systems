@@ -223,7 +223,3 @@ We welcome contributions! Please feel free to submit pull requests or open issue
 - Content-based recommendation methods
 - Cold-start problem solutions
 - Exploration vs exploitation trade-offs
-
----
-
-**Ready to discover your next favorite movie?** [Launch the interactive app](https://6oujescmadydjnbgygtm9o.streamlit.app) or explore the different algorithms in this collection! 
