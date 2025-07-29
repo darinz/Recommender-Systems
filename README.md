@@ -40,6 +40,10 @@ Recommender-Systems/
 │   ├── movie_recommender.py
 │   ├── requirements.txt
 │   └── README.md
+├── ubcf-ibcf/            # User-based vs Item-based CF comparison
+│   ├── ubcf_vs_ibcf.py
+│   ├── ubcf_vs_ibcf.R
+│   └── README.md
 ├── papers/                # Research papers and references
 │   └── README.md
 └── README.md
@@ -233,11 +237,44 @@ top_10 = get_top_popular_movies(ratings, movies)
 
 # Create a new user profile
 newuser = pd.Series(index=S.index, data=np.nan)
-newuser['m1613'] = 5  # User rated movie "m1613" with 5 stars
-newuser['m1755'] = 4  # User rated movie "m1755" with 4 stars
+newuser['m1613'] =5  # User rated movie "m1613" with 5 stars
+newuser['m1755'] =4  # User rated movie "m1755" with 4 stars
 
 # Generate personalized recommendations
 recommendations = myIBCF(newuser, S, top100_ranking)
+```
+
+### 6. User-Based vs Item-Based CF Comparison (`ubcf-ibcf/`)
+
+A comprehensive comparison system that implements and evaluates both **user-based collaborative filtering (UBCF)** and **item-based collaborative filtering (IBCF)** algorithms, providing insights into their performance characteristics and use cases.
+
+**Key Features:**
+- **Dual Implementation**: Both UBCF and IBCF algorithms in Python and R
+- **Performance Comparison**: Side-by-side evaluation of both approaches
+- **Educational Focus**: Detailed explanations of differences and trade-offs
+- **Cross-language Support**: Python and R implementations for comparison
+- **Comprehensive Analysis**: Metrics, visualizations, and practical insights
+
+**Algorithm Comparison:**
+- **UBCF**: Finds similar users and recommends items they liked
+- **IBCF**: Finds similar items and recommends based on user's item preferences
+- **Performance Metrics**: Accuracy, coverage, diversity, and computational efficiency
+- **Scalability Analysis**: Memory and time complexity comparisons
+
+**Usage Example:**
+```python
+from ubcf_vs_ibcf import compare_recommendation_systems
+
+# Compare UBCF vs IBCF performance
+results = compare_recommendation_systems(
+    ratings_matrix=ratings_data,
+    test_size=0.2,
+    n_recommendations=10
+)
+
+# Analyze results
+print(f"UBCF Accuracy: {results['ubcf']['accuracy']}")
+print(f"IBCF Accuracy: {results['ibcf']['accuracy']}")
 ```
 
 ## Dataset Information
@@ -260,6 +297,7 @@ The systems utilize the comprehensive MovieLens dataset:
 | **Content-Based** | Content-based filtering | Feature interpretable, cold-start handling | Educational, feature-rich domains |
 | **CF** | Collaborative filtering | Educational, cross-language | Learning and comparison |
 | **IBCF** | Item-based CF | Proven performance, interpretable | Production systems |
+| **UBCF vs IBCF** | UBCF + IBCF comparison | Algorithm comparison, educational | Research and learning |
 
 ## Getting Started
 
@@ -294,6 +332,14 @@ python recommendation_system.py
 ```bash
 cd ibcf
 python movie_recommender.py
+```
+
+### For Algorithm Comparison
+```bash
+cd ubcf-ibcf
+python ubcf_vs_ibcf.py
+# or for R implementation
+Rscript ubcf_vs_ibcf.R
 ```
 
 ## Performance Characteristics
