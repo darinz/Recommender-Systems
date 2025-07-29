@@ -11,10 +11,6 @@
 
 A sophisticated **Movie Recommendation System** built with Streamlit that provides personalized movie recommendations using content-based filtering algorithms. The application leverages similarity scoring and collaborative filtering techniques to suggest movies based on user preferences.
 
-## Live Demo
-
-**[Try the Movie Recommender App](https://6oujescmadydjnbgygtm9o.streamlit.app)**
-
 ## Overview
 
 This recommendation system implements content-based filtering using movie metadata including genres, keywords, cast, and other features. The algorithm computes similarity scores between movies and generates personalized recommendations based on user ratings.
