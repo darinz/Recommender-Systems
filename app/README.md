@@ -1,13 +1,9 @@
-# Movie Recommendation System
-
-> **Note**: This app has been consolidated into this repository and will be redeployed to Streamlit. The live demo link below may be temporarily unavailable during the transition.
+# Movie Recommendation System App
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![Pandas](https://img.shields.io/badge/Pandas-1.5+-green.svg)](https://pandas.pydata.org/)
 [![NumPy](https://img.shields.io/badge/NumPy-1.21+-orange.svg)](https://numpy.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Live-brightgreen.svg)](https://6oujescmadydjnbgygtm9o.streamlit.app)
 
 A sophisticated **Movie Recommendation System** built with Streamlit that provides personalized movie recommendations using content-based filtering algorithms. The application leverages similarity scoring and collaborative filtering techniques to suggest movies based on user preferences.
 
@@ -91,4 +87,4 @@ The application uses:
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
-**Ready to discover your next favorite movie?** [Launch the app](https://6oujescmadydjnbgygtm9o.streamlit.app)
+**Ready to discover your next favorite movie?**
