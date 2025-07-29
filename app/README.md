@@ -93,16 +93,4 @@ The application uses:
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Built with [Streamlit](https://streamlit.io/) for rapid web application development
-- Movie data sourced from public datasets
-- Similarity matrices computed using content-based filtering algorithms
-
----
-
 **Ready to discover your next favorite movie?** [Launch the app](https://6oujescmadydjnbgygtm9o.streamlit.app)
