@@ -52,15 +52,15 @@ For theoretical foundations and educational materials on recommender systems, ch
 
 | System | Algorithm | Strengths | Use Case |
 |--------|-----------|-----------|----------|
-| **Interactive App** | Content-based + IBCF | Real-time, visual interface | User-facing applications |
-| **Bandits** | Multi-armed bandits | Exploration vs exploitation, cold-start | Research, adaptive systems |
-| **Content-Based** | Content-based filtering | Feature interpretable, cold-start handling | Educational, feature-rich domains |
-| **CF** | Collaborative filtering | Educational, cross-language | Learning and comparison |
-| **IBCF** | Item-based CF | Proven performance, interpretable | Production systems |
-| **UBCF vs IBCF** | UBCF + IBCF comparison | Algorithm comparison, educational | Research and learning |
-| **Latent Factor Models** | SVD, NMF, SVD++ | Matrix factorization, latent representations | Advanced research, production systems |
-| **Challenge Analysis** | Cold start, sparsity, bias analysis | Challenge assessment, bias mitigation | Research, system evaluation |
-| **Deep Recommender Systems** | NCF, Wide & Deep, NeuMF | Deep learning, non-linear patterns | Advanced research, neural approaches |
+| **[Interactive App](app/)** | Content-based + IBCF | Real-time, visual interface | User-facing applications |
+| **[Bandits](bandits/)** | Multi-armed bandits | Exploration vs exploitation, cold-start | Research, adaptive systems |
+| **[Content-Based](content/)** | Content-based filtering | Feature interpretable, cold-start handling | Educational, feature-rich domains |
+| **[CF](cf/)** | Collaborative filtering | Educational, cross-language | Learning and comparison |
+| **[IBCF](ibcf/)** | Item-based CF | Proven performance, interpretable | Production systems |
+| **[UBCF vs IBCF](ubcf-ibcf/)** | UBCF + IBCF comparison | Algorithm comparison, educational | Research and learning |
+| **[Latent Factor Models](latent/)** | SVD, NMF, SVD++ | Matrix factorization, latent representations | Advanced research, production systems |
+| **[Challenge Analysis](challenge/)** | Cold start, sparsity, bias analysis | Challenge assessment, bias mitigation | Research, system evaluation |
+| **[Deep Recommender Systems](deep-rec-sys/)** | NCF, Wide & Deep, NeuMF | Deep learning, non-linear patterns | Advanced research, neural approaches |
 
 ## Systems Overview
 
