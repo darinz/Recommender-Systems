@@ -28,12 +28,6 @@ For comprehensive theoretical foundations and educational materials on recommend
 - **"Practical Recommender Systems"** by Kim Falk (2019) - Real-world implementation strategies and case studies
 - **"Recommender Systems Handbook"** by Ricci, Rokach, and Shapira (2015) - Extensive reference covering theory and practice
 
-### Online Courses & Tutorials
-
-- **[Coursera: Recommender Systems Specialization](https://www.coursera.org/specializations/recommender-systems)** - University of Minnesota course series
-- **[edX: Machine Learning for Recommender Systems](https://www.edx.org/learn/machine-learning)** - Various courses covering ML approaches
-- **[Fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/)** - Includes recommender system implementations
-
 ### Industry Resources
 
 - **[Netflix Tech Blog](https://netflixtechblog.com/tagged/recommendations)** - Real-world insights from Netflix's recommendation team
