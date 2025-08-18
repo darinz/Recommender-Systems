@@ -9,11 +9,6 @@
 
 This repository explores the application and research of recommender systems, focusing on practical implementations and insights. It features movie recommender system built using the MovieLens dataset, along with key research findings, performance evaluations, and key learnings. Dive in for a hands-on exploration of recommendation algorithms, data analysis, and system optimization.
 
-## Related Learning Resources
-
-For theoretical foundations and educational materials on recommender systems, check out the [PSL Recommender System Module](https://github.com/darinz/PSL/tree/main/13_recommender_system) which provides comprehensive coverage of recommendation algorithms, collaborative filtering techniques, and practical implementations.
-
-
 ## Quick Start
 
 ### Prerequisites
