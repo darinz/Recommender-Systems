@@ -7,7 +7,15 @@
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0+-purple.svg)](https://scikit-learn.org/)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](https://github.com/darinz/Recommender-Systems)
 
-This repository explores the application and research of recommender systems, focusing on practical implementations and insights. It features movie recommender system built using the MovieLens dataset, along with key research findings, performance evaluations, and key learnings. Dive in for a hands-on exploration of recommendation algorithms, data analysis, and system optimization.
+This repository explores the application and research of recommender systems, focusing on practical implementations and insights. It features movie recommender systems built using the MovieLens dataset, along with key research findings, performance evaluations, and key learnings. Dive in for a hands-on exploration of recommendation algorithms, data analysis, and system optimization.
+
+## Repository Structure
+
+This repository is organized into three main sections:
+
+- **`app/`** - Practical implementations and applications of recommender systems
+- **`reference/`** - Reference materials, documentation, and learning resources
+- **`research/`** - Research findings, analysis, and experimental results
 
 ## Quick Start
 
@@ -29,37 +37,22 @@ This repository explores the application and research of recommender systems, fo
    # For the interactive app
    pip install streamlit pandas numpy
    
-   # For the bandits system
-   pip install numpy pandas matplotlib seaborn scikit-learn
-   
-   # For the IBCF system
-   cd ibcf
+   # For specific applications (see individual app folders)
+   cd app/[specific-app]
    pip install -r requirements.txt
    ```
 
 3. **Run the interactive app**
    ```bash
-   cd app
+   cd app/movie-rec-app
    streamlit run movie_recommender_app.py
    ```
 
-## Algorithm Comparison
+## Applications (`app/`)
 
-| System | Algorithm | Strengths | Use Case |
-|--------|-----------|-----------|----------|
-| **[Interactive App](app/)** | Content-based + IBCF | Real-time, visual interface | User-facing applications |
-| **[Bandits](bandits/)** | Multi-armed bandits | Exploration vs exploitation, cold-start | Research, adaptive systems |
-| **[Content-Based](content/)** | Content-based filtering | Feature interpretable, cold-start handling | Educational, feature-rich domains |
-| **[CF](cf/)** | Collaborative filtering | Educational, cross-language | Learning and comparison |
-| **[IBCF](ibcf/)** | Item-based CF | Proven performance, interpretable | Production systems |
-| **[UBCF vs IBCF](ubcf-ibcf/)** | UBCF + IBCF comparison | Algorithm comparison, educational | Research and learning |
-| **[Latent Factor Models](latent/)** | SVD, NMF, SVD++ | Matrix factorization, latent representations | Advanced research, production systems |
-| **[Challenge Analysis](challenge/)** | Cold start, sparsity, bias analysis | Challenge assessment, bias mitigation | Research, system evaluation |
-| **[Deep Recommender Systems](deep-rec-sys/)** | NCF, Wide & Deep, NeuMF | Deep learning, non-linear patterns | Advanced research, neural approaches |
+The `app/` folder contains practical implementations of various recommender system algorithms and applications:
 
-## Systems Overview
-
-### 1. Interactive Movie Recommender (`app/`)
+### Interactive Movie Recommender (`movie-rec-app/`)
 
 A **Streamlit-based web application** that provides an interactive interface for movie recommendations using content-based filtering.
 
@@ -77,7 +70,7 @@ A **Streamlit-based web application** that provides an interactive interface for
 - Data Sources: External similarity matrices and movie metadata
 - Deployment: Streamlit Cloud
 
-### 2. Multi-Armed Bandit System (`bandits/`)
+### Multi-Armed Bandit System (`bandits/`)
 
 An advanced recommendation system using **multi-armed bandit algorithms** to balance exploration of new movies with exploitation of known good recommendations.
 
@@ -113,7 +106,7 @@ movie_id = recommender.epsilon_greedy_recommend(user_id=1, epsilon=0.2)
 recommender.receive_rating(user_id=1, movie_id=movie_id, rating=4.5)
 ```
 
-### 3. Content-Based Recommender System (`content/`)
+### Content-Based Recommender System (`content/`)
 
 A **content-based movie recommendation system** that analyzes movie features (genre, year, director, etc.) to generate personalized recommendations. Features comprehensive educational documentation and robust implementation.
 
@@ -140,12 +133,12 @@ recommendations = recommender.recommend(user_id=1, n_recommendations=10)
 
 **Quick Start:**
 ```bash
-cd content
+cd app/content
 pip install -r requirements.txt
 python movie_recommender.py
 ```
 
-### 4. Collaborative Filtering (`cf/`)
+### Collaborative Filtering (`cf/`)
 
 A comprehensive implementation of **collaborative filtering algorithms** with both Python and R implementations, providing educational resources and practical examples.
 
@@ -175,13 +168,13 @@ item_recommendations = cf.item_based_recommendations(user_id=1, n_recommendation
 
 **Quick Start:**
 ```bash
-cd cf
+cd app/cf
 python collaborative_filtering.py
 # or
 Rscript collaborative_filtering.R
 ```
 
-### 5. Item-Based Collaborative Filtering (`ibcf/`)
+### Item-Based Collaborative Filtering (`ibcf/`)
 
 A sophisticated implementation of **item-based collaborative filtering** using the MovieLens dataset with advanced preprocessing and optimization.
 
@@ -218,7 +211,7 @@ newuser['m1755'] =4  # User rated movie "m1755" with 4 stars
 recommendations = myIBCF(newuser, S, top100_ranking)
 ```
 
-### 6. User-Based vs Item-Based CF Comparison (`ubcf-ibcf/`)
+### User-Based vs Item-Based CF Comparison (`ubcf-ibcf/`)
 
 A comprehensive comparison system that implements and evaluates both **user-based collaborative filtering (UBCF)** and **item-based collaborative filtering (IBCF)** algorithms, providing insights into their performance characteristics and use cases.
 
@@ -251,7 +244,7 @@ print(f"UBCF Accuracy: {results['ubcf']['accuracy']}")
 print(f"IBCF Accuracy: {results['ibcf']['accuracy']}")
 ```
 
-### 7. Latent Factor Models (`latent/`)
+### Latent Factor Models (`latent/`)
 
 Advanced **latent factor models** implementation featuring SVD, NMF, and SVD++ algorithms in both Python and R. These models learn low-dimensional representations of users and items to capture underlying patterns in rating data.
 
@@ -305,7 +298,7 @@ source("latent_factor_models.R")
 - **Bias Analysis**: User and item biases capture rating tendencies and popularity
 - **Interpretability**: NMF provides non-negative, interpretable factors
 
-### 8. Recommender System Challenges Analysis (`challenge/`)
+### Recommender System Challenges Analysis (`challenge/`)
 
 A comprehensive analysis toolkit for studying fundamental challenges in recommender systems, including cold start problems, data sparsity, popularity bias, and scalability issues. Provides both Python and R implementations for educational and research purposes.
 
@@ -367,13 +360,13 @@ The Python implementation generates 12 comprehensive plots including:
 
 **Quick Start:**
 ```bash
-cd challenge
+cd app/challenge
 python challenge_analysis.py
 # or for R implementation
 Rscript challenge_analysis.R
 ```
 
-### 9. Deep Recommender Systems (`deep-rec-sys/`)
+### Deep Recommender Systems (`deep-rec-sys/`)
 
 Advanced **deep learning-based recommender systems** implementing state-of-the-art neural network architectures for collaborative filtering and rating prediction. Features both Python (PyTorch) and R (Keras) implementations with comprehensive evaluation and visualization capabilities.
 
@@ -419,11 +412,33 @@ Based on seminal papers in deep recommender systems:
 
 **Quick Start:**
 ```bash
-cd deep-rec-sys
+cd app/deep-rec-sys
 python deep_rec_sys.py
 # or for R implementation
 Rscript deep_rec_sys.R
 ```
+
+## Reference Materials (`reference/`)
+
+The `reference/` folder contains documentation, learning resources, and reference materials for understanding recommender systems concepts and implementations.
+
+## Research (`research/`)
+
+The `research/` folder contains research findings, experimental results, and analysis related to recommender systems performance, challenges, and innovations.
+
+## Algorithm Comparison
+
+| System | Algorithm | Strengths | Use Case |
+|--------|-----------|-----------|----------|
+| **[Interactive App](app/movie-rec-app/)** | Content-based + IBCF | Real-time, visual interface | User-facing applications |
+| **[Bandits](app/bandits/)** | Multi-armed bandits | Exploration vs exploitation, cold-start | Research, adaptive systems |
+| **[Content-Based](app/content/)** | Content-based filtering | Feature interpretable, cold-start handling | Educational, feature-rich domains |
+| **[CF](app/cf/)** | Collaborative filtering | Educational, cross-language | Learning and comparison |
+| **[IBCF](app/ibcf/)** | Item-based CF | Proven performance, interpretable | Production systems |
+| **[UBCF vs IBCF](app/ubcf-ibcf/)** | UBCF + IBCF comparison | Algorithm comparison, educational | Research and learning |
+| **[Latent Factor Models](app/latent/)** | SVD, NMF, SVD++ | Matrix factorization, latent representations | Advanced research, production systems |
+| **[Challenge Analysis](app/challenge/)** | Cold start, sparsity, bias analysis | Challenge assessment, bias mitigation | Research, system evaluation |
+| **[Deep Recommender Systems](app/deep-rec-sys/)** | NCF, Wide & Deep, NeuMF | Deep learning, non-linear patterns | Advanced research, neural approaches |
 
 ## Dataset Information
 
@@ -440,20 +455,20 @@ The systems utilize the comprehensive MovieLens dataset:
 
 ### For Interactive Use
 ```bash
-cd app
+cd app/movie-rec-app
 streamlit run movie_recommender_app.py
 ```
 
 ### For Educational/Content-Based Learning
 ```bash
-cd content
+cd app/content
 pip install -r requirements.txt
 python movie_recommender.py
 ```
 
 ### For Collaborative Filtering Learning
 ```bash
-cd cf
+cd app/cf
 python collaborative_filtering.py
 # or for R implementation
 Rscript collaborative_filtering.R
@@ -461,19 +476,19 @@ Rscript collaborative_filtering.R
 
 ### For Research/Development
 ```bash
-cd bandits
+cd app/bandits
 python recommendation_system.py
 ```
 
 ### For Production Systems
 ```bash
-cd ibcf
+cd app/ibcf
 python movie_recommender.py
 ```
 
 ### For Algorithm Comparison
 ```bash
-cd ubcf-ibcf
+cd app/ubcf-ibcf
 python ubcf_vs_ibcf.py
 # or for R implementation
 Rscript ubcf_vs_ibcf.R
@@ -481,7 +496,7 @@ Rscript ubcf_vs_ibcf.R
 
 ### For Latent Factor Models
 ```bash
-cd latent
+cd app/latent
 python latent_factor_models.py
 # or for R implementation
 Rscript latent_factor_models.R
@@ -489,7 +504,7 @@ Rscript latent_factor_models.R
 
 ### For Challenge Analysis
 ```bash
-cd challenge
+cd app/challenge
 python challenge_analysis.py
 # or for R implementation
 Rscript challenge_analysis.R
@@ -497,7 +512,7 @@ Rscript challenge_analysis.R
 
 ### For Deep Recommender Systems
 ```bash
-cd deep-rec-sys
+cd app/deep-rec-sys
 python deep_rec_sys.py
 # or for R implementation
 Rscript deep_rec_sys.R
@@ -510,10 +525,6 @@ Rscript deep_rec_sys.R
 - **Memory Efficient**: Uses sparse representations
 - **Robust**: Handles missing data gracefully
 - **Cold-start**: Effective handling of new users and movies
-
-## Research Papers (`papers/`)
-
-Curated collection of seminal research papers covering foundational concepts, collaborative filtering, content-based methods, matrix factorization, deep learning approaches, and recent advances. See [papers/README.md](papers/README.md) for detailed summaries and implementation resources.
 
 ## Contributing
 
